@@ -18,13 +18,13 @@ const isProductionBuild = process.env.NODE_ENV === "production";
 
 if (!apiBaseUrl) {
   throw new Error(
-    "Missing NEXT_PUBLIC_API_BASE_URL (or NEXT_PUBLIC_API_URL). Set it in your frontend environment variables."
+    "Missing NEXT_PUBLIC_API_BASE_URL (or NEXT_PUBLIC_API_URL). Set it in your frontend environment variables.",
   );
 }
 
 if (isProductionBuild && /localhost|127\.0\.0\.1/i.test(apiBaseUrl)) {
   throw new Error(
-    "Invalid production API URL. NEXT_PUBLIC_API_BASE_URL cannot point to localhost in production."
+    "Invalid production API URL. NEXT_PUBLIC_API_BASE_URL cannot point to localhost in production.",
   );
 }
 
